@@ -1,0 +1,63 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabajo Práctico Individual</title>
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                background-color: #f8f9fa;
+                margin: 0;
+                padding: 40px 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 900px;
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+
+            h1 {
+                color: #1a1a1a;
+                font-size: 1.8rem;
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+
+            p {
+                color: #666;
+                margin-bottom: 24px;
+                line-height: 1.5;
+            }
+
+            .flourish-wrapper {
+                width: 100%;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Interrupciones en el trabajo</h1>
+            <p>Como es mi dia laboral con las interrupciones familiares</p>
+
+            <div class="flourish-embed flourish-hierarchy" data-src="visualisation/30084383"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30084383/thumbnail" width="100%" alt="hierarchy visualization" /></noscript></div>
+            <!-- <div class="flourish-wrapper">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/ID_DE_TU_VISUALIZACION">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                    <noscript>
+                        <img src="https://public.flourish.studio/visualisation/ID_DE_TU_VISUALIZACION/thumbnail" width="100%" alt="chart visualization" />
+                    </noscript>
+                </div>
+                </div> -->
+        </div>
+
+    </body>
+    </html>
