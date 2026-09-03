@@ -1,0 +1,89 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e9ecef;
+    margin: 32px 0;
+}
+
+/* Bloque contenedor de cada gráfico: centra y da aire uniforme */
+.chart-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.chart-block object,
+.chart-block svg,
+.chart-block iframe,
+.chart-block img,
+.chart-block .flourish-embed,
+.chart-block .tableauPlaceholder {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.chart-block .flourish-embed {
+    display: flex;
+    justify-content: center;
+}
+
+/* RawGraphs (SVG 700x300 vía viewBox): fijamos la proporción para que el
+   <object> escale completo en pantallas angostas en vez de recortarse. */
+.chart-block object[type="image/svg+xml"] {
+    aspect-ratio: 7 / 3;
+}
+
+/* El script de Tableau fija width/height en px sobre el <object> interno;
+   forzamos que respete el ancho real del bloque para que no desborde el contenedor. */
+.chart-block .tableauPlaceholder,
+.chart-block .tableauPlaceholder object,
+.chart-block .tableauPlaceholder .tableauViz {
+    width: 100% !important;
+    max-width: 700px;
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+}
