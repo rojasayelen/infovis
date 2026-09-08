@@ -32,11 +32,76 @@ body {
   margin: 0 auto;
 }
 
-/* Header del Informe */
+/* Header del Informe — hero glaciar oscuro */
 header {
-  margin-bottom: 40px;
-  border-bottom: 2px solid var(--border-subtle);
-  padding-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 48px;
+  padding: 56px 48px 64px;
+  border-radius: 10px;
+  min-height: 380px;
+  background: linear-gradient(180deg, #0E1B23 0%, #16303B 55%, #1F4959 100%);
+  color: var(--glacier-light);
+}
+
+/* Contenido del header por encima de los vectores */
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Siluetas de montaña en capas al pie del hero */
+.header-horizon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 46%;
+  min-height: 150px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Fragmentos facetados tipo iceberg */
+.header-shard {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+.header-shard--tl { top: 22px; left: 20px; width: 58px; height: 58px; }
+.header-shard--br { right: 26px; bottom: 22px; width: 84px; height: 84px; }
+
+/* Texto del header adaptado al fondo oscuro */
+header .meta-tag {
+  background: transparent;
+  padding: 0;
+  color: var(--amber);
+  letter-spacing: 2px;
+}
+
+header h1 {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Palatino", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  line-height: 1.12;
+  color: #F4F1EA;
+}
+
+header .intro-lead {
+  color: var(--glacier-light);
+  max-width: 640px;
+}
+
+header .author-bar {
+  color: var(--glacier-light);
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  header { padding: 40px 26px 52px; min-height: 320px; }
+  .header-shard--tl { width: 42px; height: 42px; top: 16px; left: 14px; }
+  .header-shard--br { width: 60px; height: 60px; right: 16px; }
 }
 
 .meta-tag {
