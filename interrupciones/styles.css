@@ -182,6 +182,30 @@ h1 {
   border: none;
 }
 
+/* Embed de Flourish: ocupa el ancho del contenedor */
+.chart-container .flourish-embed {
+  width: 100%;
+}
+
+/* Ajuste específico para el contenedor de Tableau.
+   Tableau inyecta su propio script responsive, pero si el contenedor padre
+   no define límites claros suele generar scrollbar vertical interno o
+   colapsar en pantallas móviles. */
+.viz-card:last-of-type .chart-container,
+.tableau-container {
+  width: 100%;
+  min-height: 580px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.tableau-container .tableauPlaceholder {
+  width: 100%;
+  margin: 0 auto !important;
+}
+
 /* Análisis y Hallazgos */
 .analysis-block {
   border-top: 1px solid var(--line-divider);
