@@ -125,6 +125,21 @@ h1 {
   margin-bottom: 24px;
 }
 
+/* Tarjeta cuya visualización ya trae su propio título (p. ej. Flourish):
+   la bajada de la tarjeta se acerca al gráfico y actúa de puente, para que
+   la pregunta-sección quede como único encabezado y el título embebido se
+   lea como título del gráfico, sin competir entre sí. */
+.section-desc.viz-has-embedded-title {
+  margin-bottom: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-divider);
+}
+
+.section-desc.viz-has-embedded-title + .chart-container {
+  margin-top: 0;
+  padding-top: 4px;
+}
+
 /* Grilla de KPIs */
 .kpi-grid {
   display: grid;
@@ -190,22 +205,34 @@ h1 {
 }
 
 /* Ajuste específico para el contenedor de Tableau.
-   Tableau inyecta su propio script responsive, pero si el contenedor padre
-   no define límites claros suele generar scrollbar vertical interno o
-   colapsar en pantallas móviles. */
-.viz-card:last-of-type .chart-container,
+   El dashboard es de tamaño automático: si le forzamos un ancho fijo,
+   Tableau saca barras internas; si le forzamos un alto de más, queda un
+   hueco blanco enorme. Solución: dejar que reajuste el ancho al 100% del
+   contenedor y fijarle solo un alto acorde a su contenido real, recortando
+   cualquier costura con overflow. */
 .tableau-container {
   width: 100%;
-  min-height: 580px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  display: block;
 }
 
 .tableau-container .tableauPlaceholder {
-  width: 100%;
-  margin: 0 auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.tableau-container .tableauPlaceholder > object,
+.tableau-container .tableauPlaceholder iframe {
+  width: 100% !important;
+  height: 600px !important;   /* alto real del panel: subir/bajar ~40px si sobra o falta */
+}
+
+@media (max-width: 640px) {
+  .tableau-container .tableauPlaceholder > object,
+  .tableau-container .tableauPlaceholder iframe {
+    height: 520px !important;
+  }
 }
 
 /* Análisis y Hallazgos */
