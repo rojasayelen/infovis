@@ -2,41 +2,201 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Logística Invisible - Ayelén Rojas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Logística Invisible | Análisis de Datos Personales</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>La Logística Invisible: El Costo de la Interrupción</h1>
-    <p>Auditoría temporal sobre la fragmentación de la jornada laboral en profesionales independientes.</p>
 
-    <!-- Visualización 1: RAWGraphs -->
-    <div class="viz-card">
-      <div class="viz-title">¿De quién provienen las interrupciones y qué tipo de demanda generan sobre mi jornada laboral?</div>
-      <div class="viz-desc">Diagrama de flujo aluvial que vincula el miembro del hogar, el requerimiento y su nivel de postergabilidad.</div>
-      <img src="assets/deQuienProviene.svg" alt="Diagrama Aluvial RAWGraphs" class="viz-img">
+<div class="container">
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header>
+    <span class="meta-tag">Trabajo Práctico · Visualización de Datos Personales</span>
+    <h1>La Logística Invisible: El Costo Real de la Interrupción</h1>
+    <p class="intro-lead">Una auditoría empírica sobre la microfragmentación de la jornada profesional y la transferencia de horas de descanso en el trabajo independiente.</p>
+    <div class="author-bar">
+      <span><strong>Autora:</strong> Ayelen Rojas</span>
+      <span><strong>Muestra:</strong> 2 semanas de Agosto - 1 semana de Septiembre 2026 + Serie Proyectada Marzo - Noviembre</span>
+    </div>
+  </header>
+
+  <!-- INTRODUCCIÓN METODOLÓGICA -->
+  <section class="narrative-intro">
+    <h3>Motivación y Metodología de Registro</h3>
+    <p>En el ejercicio profesional autónomo suele asumirse que la flexibilidad horaria es sinónimo de libertad absoluta. Sin embargo, existe un fenómeno poco visibilizado: <strong>la asimetría perceptiva del entorno</strong>. Para la familia, la presencia física en el hogar con frecuencia se traduce en una disponibilidad operativa ilimitada.</p>
+    <p>Para cuantificar este impacto, implementé una recolección sistemática mediante un formulario estructurado cada vez que mi jornada sufría una disrupción. Registré el familiar emisor, la tarea profesional vulnerada, la duración real en minutos, la urgencia subjetiva versus la necesidad objetiva del evento. El objetivo: auditar si las interrupciones responden a emergencias genuinas o a una delegación cómoda de la logística doméstica.</p>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- VISUALIZACIÓN 1: RAWGRAPHS (DATOS REALES) -->
+  <!-- ========================================== -->
+  <div class="viz-card">
+    <div class="section-question">¿De quién provienen las interrupciones y qué tipo de demanda generan sobre mi jornada laboral?</div>
+    <div class="section-desc">Diagrama de flujo aluvial que traza el camino desde el miembro del hogar hasta la justificación real del evento.</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">61</div>
+        <div class="kpi-label">Eventos Auditados</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value alert">67%</div>
+        <div class="kpi-label">Demanda del Hijo</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">33%</div>
+        <div class="kpi-label">Interrupciones Evitables</div>
+      </div>
     </div>
 
-    <!-- Visualización 2: Datawrapper -->
-    <div class="viz-card">
-      <div class="viz-title">¿En qué momentos críticos de la jornada se fragmenta mi tiempo de trabajo?</div>
-      <div class="viz-desc">Matriz horaria de calor por día hábil.</div>
+    <div class="chart-container">
+      <img src="assets/deQuienProviene.svg" alt="Diagrama Aluvial RAWGraphs: miembro del hogar, requerimiento y postergabilidad">
+    </div>
+
+    <div class="analysis-block">
+      <div class="analysis-title">Análisis de la Visualización</div>
+      <p class="analysis-text">
+        El gráfico aluvial permite visualizar con claridad los caudales dominantes de interrupción. La banda superior naranja revela que el mayor volumen proviene del cuidado y acompañamiento escolar del hijo. No obstante, al observar la apertura hacia el extremo derecho, se advierte una bifurcación crítica: mientras las actividades programadas del hijo demandan atención sincrónica ineludible, las intervenciones de los adultos (esposo, madre y padre) se ramifican casi en su totalidad hacia <em>"Podría haber esperado"</em> o <em>"No era necesaria"</em>.
+      </p>
+      <div class="takeaways-box">
+        <h4>Hallazgos Clave</h4>
+        <ul class="takeaways-list">
+          <li><strong>El factor de postergabilidad:</strong> 1 de cada 3 interrupciones totales registradas no revestía urgencia real y pudo haberse resuelto al finalizar el bloque de trabajo concentrado.</li>
+          <li><strong>Perfil de la demanda adulta:</strong> El 78% de las consultas y recordatorios iniciados por adultos corresponden a soporte tecnológico, trámites administrativos delegados o consultas cotidianas no críticas.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- VISUALIZACIÓN 2: DATAWRAPPER (DATOS REALES) -->
+  <!-- ========================================== -->
+  <div class="viz-card">
+    <div class="section-question">¿En qué momentos críticos de la jornada se fragmenta mi tiempo de trabajo?</div>
+    <div class="section-desc">Matriz de calor que cruza los días hábiles con las franjas horarias de mayor disrupción operativa.</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">12:00 - 16:00</div>
+        <div class="kpi-label">Franja Más Vulnerable</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value alert">3 picos / h</div>
+        <div class="kpi-label">Densidad Máxima Diaria</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">&lt; 90 min</div>
+        <div class="kpi-label">Bloque Continuo de Foco</div>
+      </div>
+    </div>
+
+    <div class="chart-container">
       <iframe title="Momentos Críticos" aria-label="Table" id="datawrapper-chart-yLuL1" src="https://datawrapper.dwcdn.net/yLuL1/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="519" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
     </div>
 
-    <!-- Visualización 3: Flourish -->
-    <div class="viz-card">
-      <div class="viz-title">¿Cómo evoluciona el costo temporal de las interrupciones entre marzo y noviembre?</div>
-      <div class="viz-desc">Área apilada: horas productivas perdidas vs. horas recuperadas durante la noche.</div>
-      <!-- Pegar aquí el iframe provisto por Flourish -->
-    </div>
-
-    <!-- Visualización 4: Tableau Public -->
-    <div class="viz-card">
-      <div class="viz-title">¿Cuál es el balance anual entre la demanda operativa familiar y el costo en horas de descanso?</div>
-      <div class="viz-desc">Panel de correlación y KPI consolidado de impacto anual.</div>
-      <!-- Pegar aquí el embed code de Tableau Public -->
+    <div class="analysis-block">
+      <div class="analysis-title">Análisis de la Visualización</div>
+      <p class="analysis-text">
+        La escala cromática secuencial en azules expone de inmediato los patrones de fricción temporal. Los bloques más oscuros señalan una saturación recurrente entre las 12:00 y las 16:00 horas, coincidiendo con la finalización de los turnos escolares, el almuerzo y la coordinación de traslados a actividades extracurriculares.
+      </p>
+      <div class="takeaways-box">
+        <h4>Hallazgos Clave</h4>
+        <ul class="takeaways-list">
+          <li><strong>La quiebra del Deep Work:</strong> Entre las 14:00 y las 16:00 h se registran hasta 3 interrupciones por hora, impidiendo consolidar bloques de concentración profunda necesarios para tareas analíticas como liquidación impositiva o contabilidad de costos.</li>
+          <li><strong>Dispersión semanal:</strong> Los días martes y jueves concentran los mayores focos de interrupción reiterada, mientras que las primeras horas de la mañana (9:00 a 11:00) constituyen la única ventana de estabilidad productiva relativa.</li>
+        </ul>
+      </div>
     </div>
   </div>
+
+  <!-- ========================================== -->
+  <!-- VISUALIZACIÓN 3: FLOURISH (PROYECCIÓN ANUAL) -->
+  <!-- ========================================== -->
+  <div class="viz-card">
+    <div class="section-question">¿Cómo evoluciona el costo temporal de las interrupciones entre marzo y noviembre?</div>
+    <div class="section-desc">Área apilada que proyecta la pérdida de horas hábiles frente a las horas compensadas en horario nocturno.</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">215 hs</div>
+        <div class="kpi-label">Horas Hábiles Perdidas</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value alert">170 hs</div>
+        <div class="kpi-label">Horas Nocturnas Pagadas</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">79%</div>
+        <div class="kpi-label">Tasa de Transferencia</div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <!-- PEGAR AQUÍ EL IFRAME DE FLOURISH -->
+    </div>
+
+    <div class="analysis-block">
+      <div class="analysis-title">Análisis de la Visualización</div>
+      <p class="analysis-text">
+        Al anualizar la tasa de interrupción observada a lo largo del calendario activo de marzo a noviembre, el gráfico de área revela dos crestas pronunciadas: marzo (reorganización logística por inicio de ciclo lectivo) y julio (pico máximo de 32 horas mensuales debido al receso escolar de invierno). La capa superior ámbar demuestra cómo la deuda de trabajo acumulada de día se traslada casi linealmente a la noche.
+      </p>
+      <div class="takeaways-box">
+        <h4>Hallazgos Clave</h4>
+        <ul class="takeaways-list">
+          <li><strong>La tasa de compensación invisible:</strong> De las 215 horas hábiles absorbidas por la logística familiar a lo largo del año, 170 horas (el 79%) se recuperaron trabajando de noche (22:00 a 02:00 h).</li>
+          <li><strong>El costo en descanso:</strong> Este desplazamiento equivale a resignar aproximadamente 21 jornadas completas de 8 horas de sueño o descanso personal al año para mantener al día los compromisos profesionales.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- VISUALIZACIÓN 4: TABLEAU PUBLIC (PROYECCIÓN) -->
+  <!-- ========================================== -->
+  <div class="viz-card">
+    <div class="section-question">¿Cuál es el balance anual entre la demanda operativa familiar y el costo en horas de descanso?</div>
+    <div class="section-desc">Panel analítico consolidado que evalúa la correlación entre la categoría de demanda y el impacto acumulado anual.</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">862</div>
+        <div class="kpi-label">Interrupciones Totales / Año</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">Educación</div>
+        <div class="kpi-label">Categoría Más Gravosa</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value alert">-21 Días</div>
+        <div class="kpi-label">Déficit de Descanso Anual</div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <!-- PEGAR AQUÍ EL EMBED CODE DE TABLEAU PUBLIC -->
+    </div>
+
+    <div class="analysis-block">
+      <div class="analysis-title">Análisis de la Visualización</div>
+      <p class="analysis-text">
+        El panel ejecutivo en Tableau sintetiza el modelo global. Cruza la tipología de las interrupciones proyectadas con el volumen acumulado de horas resignadas, evidenciando que la logística vinculada a educación y traslados representa el núcleo duro del déficit temporal.
+      </p>
+      <div class="takeaways-box">
+        <h4>Hallazgos Clave</h4>
+        <ul class="takeaways-list">
+          <li><strong>Conclusión estratégica:</strong> El trabajo independiente no elimina los horarios de oficina, sino que fragmenta su cumplimiento. El verdadero costo de la falta de parametrización con el entorno no es la pérdida de ingresos, sino el deterioro silencioso del tiempo de recuperación personal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Proyecto de Visualización de Datos Personales · Desarrollado con RAWGraphs, Datawrapper, Flourish y Tableau · 2026</p>
+  </footer>
+
+</div>
+
 </body>
 </html>
