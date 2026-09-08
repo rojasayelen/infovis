@@ -94,6 +94,8 @@ h1 {
   font-size: 0.95rem;
   color: var(--text-muted);
   margin-bottom: 12px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .narrative-intro p:last-child {
@@ -224,6 +226,8 @@ h1 {
   font-size: 0.92rem;
   color: var(--text-muted);
   margin-bottom: 16px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .takeaways-box {
@@ -265,6 +269,34 @@ h1 {
   color: var(--amber);
   font-size: 0.75rem;
   top: 1px;
+}
+
+/* Cierre / Reflexión final */
+.closing-card {
+  background: var(--glacier-dark);
+  border-radius: 8px;
+  padding: 40px 44px;
+  margin-bottom: 48px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.closing-quote blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #FFFFFF;
+  text-align: justify;
+  hyphens: auto;
+  border-left: 4px solid var(--amber);
+  padding-left: 20px;
+}
+
+.closing-author {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--glacier-light);
 }
 
 /* Footer */
